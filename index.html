@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+  </head>
+  <body>
+<script>
+
+function getComputerChoice(){
+  choiceDec = Math.random()
+  if (choiceDec >= 0 && choiceDec <= 0.33) {return 'rock'}
+  else if (choiceDec > 0.33 && choiceDec <= 0.66) {return'paper'}
+  else {return 'scissors'}
+}
+
+function computerSelection() { return getComputerChoice()}
+const playerSelection = 'scissors'
+
+function playRound(computerSelection, playerSelection){
+
+
+
+
+  if (computerSelection === playerSelection) {return "TIE"}
+  else if (computerSelection === 'rock' && playerSelection === 'paper') {return 'YOU WIN, PAPER BEATS ROCK'}
+  else if (computerSelection === 'rock' && playerSelection === 'scissors') {return 'YOU LOSE, ROCK BEATS SCISSORS'}
+  else if (computerSelection === 'paper' && playerSelection === 'rock') {return 'YOU LOSE, PAPER BEATS ROCK'}
+  else if (computerSelection === 'paper' && playerSelection === 'scissors') {return 'YOU WIN, SCISSORS BEATS PAPER'}
+  else if (computerSelection === 'scissors' && playerSelection === 'rock') {return 'YOU WIN, ROCK BEATS SCISSORS'}
+  else if (computerSelection === 'scissors' && playerSelection === 'paper') {return 'YOU LOSE, SCISSORS BEATS PAPER'}
+
+}
+
+
+function game() {
+  for (let i = 0; i < 5; i++) {
+    playRound(computerSelection, playerSelection)
+  }
+
+
+
+}
+</script>
+  </body>
+</html>
